@@ -21,7 +21,7 @@ const About = () => {
           Everyone has a Dream. Cedric has a dream of becoming successful music star, Against the will of his father chief Donald who tried spoiling Doan With Wealth To get at Cedric. She is now left In the pool of her own blood.. Who Rape Joan?
 
           </p>
-          <ul className="mb-4 list-disc list-inside space-y-2 text-gray-300 ">
+          <ul className="mb-4 list-disc list-inside space-y-2 text-gray-300 text-sm md:text-base">
             <li>Genre: Drama, Action</li>
             <li>Directed by: King Noel D. Metrock</li>
             <li>Starring: Yah-El Enwalum, Nazareth Jesse, David Mckenzie (Ghana)</li>

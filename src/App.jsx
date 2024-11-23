@@ -1,6 +1,7 @@
 import About from "./components/About"
 import Buy from "./components/Buy"
 import Contact from "./components/Contact"
+import CookieNotification from "./components/CookieConsent"
 import Footer from "./components/Footer"
 import Gallery from "./components/Gallery"
 import Hero from "./components/Hero"
@@ -18,6 +19,7 @@ function App() {
     <Buy />
     <Contact />
     <Footer />
+    <CookieNotification />
      
     </>
   )

@@ -88,7 +88,7 @@ const Nav = () => {
           <FaTwitter className="text-white w-6 h-6 hover:text-blue-300 transition" />
           <FaInstagram className="text-white w-6 h-6 hover:text-blue-300 transition" />
           <button className="bg-white text-blue-900 px-4 py-2 rounded-md font-semibold hover:bg-blue-100 transition">
-            Get Started
+            Buy Now
           </button>
         </div>
       </div>
