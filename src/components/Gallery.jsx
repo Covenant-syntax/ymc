@@ -86,8 +86,8 @@ const Gallery = () => {
   };
 
   return (
-    <div className="gallery bg-gray-100 p-8 rounded-md shadow-lg">
-      <h2 className="text-2xl font-bold text-center mb-6">Videos & Photos</h2>
+    <div className="gallery bg-gray-900 p-8 shadow-lg">
+      <h2 className="text-2xl font-bold text-center mb-6 text-white">Videos & Photos</h2>
       <Slider {...settings}>
         {videoData.map((video, index) => (
           <div
@@ -100,7 +100,7 @@ const Gallery = () => {
               alt={video.title}
               className="rounded-lg shadow-md hover:opacity-90 transform hover:scale-105 transition"
             />
-            <p className="mt-2 text-sm text-gray-700">{video.title}</p>
+            <p className="mt-2 text-sm text-gray-300">{video.title}</p>
           </div>
         ))}
       </Slider>

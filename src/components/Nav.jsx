@@ -5,24 +5,12 @@ import logo from "../assets/ymc-logo.png";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent scrolling when the menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-    return () => {
-      document.body.classList.remove('overflow-hidden'); // Cleanup in case component unmounts
-    };
-  }, [isOpen]);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-blue-950 py-3 px-4 sticky top-0 z-50">
+    <nav className="bg-gray-900 py-3 px-5 sticky top-0 z-50">
       {/* Mobile Layout */}
       <div className="flex items-center justify-between md:hidden">
         {/* Hamburger Icon */}
@@ -50,75 +38,56 @@ const Nav = () => {
 
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <img src={logo} alt="Logo" className="w-8" />
+          <img src={logo} alt="Logo" className="w-20" />
         </a>
 
         {/* Social Media Icons */}
         <div className="flex items-center space-x-3">
-          <FaFacebook className="text-white w-5 h-5 hover:text-blue-800 transition" />
-          <FaTwitter className="text-white w-5 h-5 hover:text-blue-800 transition" />
-          <FaInstagram className="text-white w-5 h-5 hover:text-blue-800 transition" />
+          <FaFacebook className="text-white w-5 h-5 hover:scale-125 transition-transform" />
+          <FaTwitter className="text-white w-5 h-5 hover:scale-125 transition-transform" />
+          <FaInstagram className="text-white w-5 h-5 hover:scale-125 transition-transform" />
         </div>
       </div>
 
       {/* Desktop Layout */}
       <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto">
-        {/* Left Section: Logo + Links */}
         <div className="flex items-center space-x-6">
           <a href="#" className="flex items-center">
-            <img src={logo} alt="Logo" className="w-8" />
-          </a>
-          <a href="#" className="text-white hover:text-blue-300 transition">
-            Home
-          </a>
-          <a href="#about" className="text-white hover:text-blue-300 transition">
-            About
-          </a>
-          <a href="#services" className="text-white hover:text-blue-300 transition">
-            Services
-          </a>
-          <a href="#contact" className="text-white hover:text-blue-300 transition">
-            Contact
+            <img src={logo} alt="Logo" className="w-24 mr-4" />
           </a>
         </div>
 
-        {/* Right Section: Social Media + Button */}
         <div className="flex items-center space-x-4">
-          <FaFacebook className="text-white w-6 h-6 hover:text-blue-300 transition" />
-          <FaTwitter className="text-white w-6 h-6 hover:text-blue-300 transition" />
-          <FaInstagram className="text-white w-6 h-6 hover:text-blue-300 transition" />
-          <button className="bg-white text-blue-900 px-4 py-2 rounded-md font-semibold hover:bg-blue-100 transition">
-            Buy Now
+          <FaFacebook className="text-white w-5 h-5 hover:scale-125 transition-transform" />
+          <FaTwitter className="text-white w-5 h-5 hover:scale-125 transition-transform" />
+          <FaInstagram className="text-white w-5 h-5 hover:scale-125 transition-transform" />
+          <button className="bg-white text-blue-900 px-4 py-2 text-sm rounded-md font-bold hover:bg-blue-100 transition">
+            Stream Movie
           </button>
         </div>
       </div>
 
-      {/* Full-Screen Mobile Menu */}
+      {/* Dropdown Menu Positioned Below Nav */}
       <div
-        className={`fixed top-0 left-0 bg-blue-900 w-screen h-screen transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`absolute left-0 right-0 bg-gray-900 bg-opacity-80 border-t border-gray-700 transition-all duration-500 ease-in-out ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
+        style={{ top: '100%', overflow: 'hidden' }}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-6 text-white px-6">
-          <button
-            onClick={toggleMenu}
-            className="absolute top-4 right-4 text-white text-3xl"
-          >
-            ×
-          </button>
-          <a href="#" className="text-xl hover:text-blue-300 transition">
-            Home
-          </a>
-          <a href="#about" className="text-xl hover:text-blue-300 transition">
-            About
-          </a>
-          <a href="#services" className="text-xl hover:text-blue-300 transition">
-            Services
-          </a>
-          <a href="#contact" className="text-xl hover:text-blue-300 transition">
-            Contact
-          </a>
-        </div>
+        <ul className="text-white text-sm divide-y divide-gray-600">
+          <li className="py-3 pl-6 hover:bg-gray-700 hover:text-blue-300 transition">
+            <a href="#" className="block">Movie</a>
+          </li>
+          <li className="py-3 pl-6 hover:bg-gray-700 hover:text-blue-300 transition">
+            <a href="#about" className="block">Synopsis</a>
+          </li>
+          <li className="py-3 pl-6 hover:bg-gray-700 hover:text-blue-300 transition">
+            <a href="#services" className="block">Images</a>
+          </li>
+          <li className="py-3 pl-6 hover:bg-gray-700 hover:text-blue-300 transition">
+            <a href="#contact" className="block">Buy & Stream Movie</a>
+          </li>
+        </ul>
       </div>
     </nav>
   );

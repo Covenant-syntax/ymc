@@ -28,7 +28,7 @@ const About = () => {
             <li>Release Year: 2024</li>
           </ul>
           <button className="px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300">
-            Learn More
+            STREAM MOVIE
           </button>
         </div>
       </div>

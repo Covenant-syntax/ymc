@@ -1,59 +1,70 @@
-import React from 'react';
+/** @format */
+
+import React from "react";
+import { HiOutlineMail } from "react-icons/hi"; // Email icon
+import logo from "../assets/ymc-logo-footer.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white py-10">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-        {/* Left Section */}
-        <div className="flex items-center space-x-4">
-          {/* Logo */}
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex justify-center items-center">
-            <span className="text-black font-bold">D</span>
-          </div>
-          {/* Title and Description */}
-          <div>
-            <h1 className="text-xl font-semibold">DuskUI</h1>
-            <p className="text-sm text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-        </div>
+    <footer className='bg-gray-900 text-white py-10'>
+      {/* Divider Line */}
+      <div className='border-t border-gray-700 mb-10'></div>
 
-        {/* Middle Section */}
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center bg-gray-800 px-4 py-2 rounded-lg space-x-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5 text-gray-400"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.75 6.75l-9 7.5-9-7.5M21.75 17.25v-10.5l-9 7.5-9-7.5v10.5m18 0h-15"
-              />
-            </svg>
-            <span className="text-gray-400 text-sm">hello@landingfolio.com</span>
+      <div className="max-w-4xl mx-auto">
+        <div className='container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0'>
+          {/* Left Section */}
+          <div className='flex items-center space-x-4'>
+            {/* Logo */}
+            <div className='w-12 h-12 rounded-full bg-gray-800 flex justify-center items-center'>
+              <img src={logo} alt='YMC Logo' className='w-8 h-8' />
+            </div>
+            {/* Title and Description */}
+            <div>
+              <h1 className='text-lg md:text-xl font-semibold'>
+                YAH-EL MOVIE CONCEPT
+              </h1>
+              <p className='text-sm text-gray-400'>
+                African movies at its finest
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Right Section */}
-        <div className="flex space-x-8 text-sm">
-          <a href="#about" className="hover:text-gray-300">
-            About
-          </a>
-          <a href="#features" className="hover:text-gray-300">
-            Features
-          </a>
-          <a href="#pricing" className="hover:text-gray-300">
-            Pricing & Plans
-          </a>
-          <a href="#contact" className="hover:text-gray-300">
-            Contact
-          </a>
+          {/* Right Section */}
+          <div className='flex flex-col items-center text-sm '>
+            {/* Email Button with Icon (on small screens, stays centered; on medium screens, above the nav links) */}
+            <div className=' md:w-auto'>
+              <a
+                href='mailto:Enwelumyahel2001@gmail.com'
+                className='flex items-center bg-gray-700 px-5 py-2 rounded-lg text-white text-sm font-medium hover:bg-gray-600 transition w-full md:w-auto mb-4 md:mb-0'>
+                <HiOutlineMail size={24} className='mr-2' />{" "}
+                Enwelumyahel2001@gmail.com
+              </a>
+            </div>
+
+            {/* Nav Links */}
+            <div className='flex flex-wrap justify-center md:justify-end space-x-6 md:mt-3'>
+              <a
+                href='#about'
+                className='hover:text-gray-300 hover:underline transition'>
+                Movie
+              </a>
+              <a
+                href='#features'
+                className='hover:text-gray-300 hover:underline transition'>
+                Synopsis
+              </a>
+              <a
+                href='#pricing'
+                className='hover:text-gray-300 hover:underline transition'>
+                Images
+              </a>
+              <a
+                href='#contact'
+                className='hover:text-gray-300 hover:underline transition'>
+                Buy & Stream Movie
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import About from "./components/About"
 import Buy from "./components/Buy"
-import Contact from "./components/Contact"
+import ComplaintChatbot from "./components/ComplaintsChatBot.jsx"
 import CookieNotification from "./components/CookieConsent"
 import Footer from "./components/Footer"
 import Gallery from "./components/Gallery"
@@ -17,7 +17,7 @@ function App() {
     <About />
     <Gallery />
     <Buy />
-    <Contact />
+    <ComplaintChatbot />
     <Footer />
     <CookieNotification />
      
