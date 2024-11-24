@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import logo from "../assets/ymc-logo.png";
 
@@ -10,7 +10,11 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-gray-900 py-3 px-5 sticky top-0 z-50">
+    <nav
+      className="py-3 px-5 sticky top-0 z-50 
+                 bg-gray-900 md:bg-gray-900 md:bg-opacity-90 
+                 shadow-sm md:shadow-none transition-all duration-300"
+    >
       {/* Mobile Layout */}
       <div className="flex items-center justify-between md:hidden">
         {/* Hamburger Icon */}
